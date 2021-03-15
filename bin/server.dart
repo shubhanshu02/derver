@@ -1,11 +1,36 @@
 import 'dart:io';
-
 import 'package:args/args.dart';
-import 'package:shelf/shelf.dart' as shelf;
-import 'package:shelf/shelf_io.dart' as io;
+import 'package:shelf_router/shelf_router.dart';
+import 'package:shelf/shelf.dart';
+import 'package:shelf_static/shelf_static.dart';
+import 'package:shelf/shelf_io.dart' as shelf_io;
 
-// For Google Cloud Run, set _hostname to '0.0.0.0'.
 const _hostname = 'localhost';
+
+class MyServer {
+  void init(port) async {
+    final server = await shelf_io.serve(handler, _hostname, port);
+    print('Server running on localhost:${server.port}');
+  }
+
+  Handler get handler {
+    final router = Router();
+
+    // Check for server
+    router.get('/checkserver', (Request request) {
+      return Response.ok('Hi! Server is running fine!');
+    });
+
+    // Handler for static files
+    router.mount('/static/', createStaticHandler('static'));
+    // Handler for HTML Files
+    // TODO: Switch to template handling
+    router.mount(
+        '/', createStaticHandler('templates', defaultDocument: 'index.html'));
+
+    return router;
+  }
+}
 
 void main(List<String> args) async {
   var parser = ArgParser()..addOption('port', abbr: 'p');
@@ -21,17 +46,6 @@ void main(List<String> args) async {
     exitCode = 64;
     return;
   }
-
-  var handler = const shelf.Pipeline()
-      .addMiddleware(shelf.logRequests())
-      .addHandler(_echoRequest)
-      .addHandler(_echoRequest);
-
-  var server = await io.serve(handler, _hostname, port);
-  print('Serving at http://${server.address.host}:${server.port}');
+  final service = MyServer();
+  service.init(port);
 }
-
-shelf.Response _echoRequest(shelf.Request request) {
-  return shelf.Response.ok('Request for "${request.url}" "${request.method}');
-}
-
