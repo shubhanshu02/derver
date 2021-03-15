@@ -21,3 +21,5 @@ Serving the HTML part statically from `public` folder.
 This project is created using [Shelf](https://pub.dev/packages/shelf) from
 templates made available by Stagehand under a BSD-style
 [license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+
+Photos: These were all captured by my phone camera.
