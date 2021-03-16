@@ -21,8 +21,7 @@ class MyServer {
     router.mount('/static/', createStaticHandler('static'));
     // Handler for HTML Files
     // TODO: Switch to template handling
-    router.mount(
-        '/', createStaticHandler('templates', defaultDocument: 'index.html'));
+    router.mount('/', createStaticHandler('templates', defaultDocument: 'index.html'));
 
     return router;
   }
