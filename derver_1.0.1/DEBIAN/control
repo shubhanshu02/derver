@@ -1,0 +1,7 @@
+Package: derver yes
+Version: 1.0.1
+Architecture: amd64
+Maintainer: Shubhanshu Saxena <shubhanshu.e01@gmail.com>
+Description: derver
+ Derver is a standalone server built in dart.
+Tag: implemented-in::dart, interface::commandline

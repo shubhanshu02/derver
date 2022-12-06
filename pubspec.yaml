@@ -1,10 +1,10 @@
 name: server
 description: A standalone server application written in Dart language.
 
-version: 1.0.0
+version: 1.0.3
 
 environment:
-  sdk: ">=2.10.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
   args: ^2.0.0
@@ -12,9 +12,15 @@ dependencies:
   shelf_router: ^1.0.0
   shelf_static: ^1.0.0
   http: ^0.13.0
+  grinder: ^0.9.0
+  cli_pkg:
+    path: ../dart_cli_pkg
+
+
 
 
 dev_dependencies:
   pedantic: ^1.9.0
+  dart_style: ^2.0.0
 
 repository: https://github.com/shubhanshu02/derver

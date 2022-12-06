@@ -1,0 +1,35 @@
+Package: dart-sass
+Version: 1.0.3
+Architecture: amd64
+Maintainer: Shubhanshu Saxena <shubhanshu.e01@gmail.com>
+Filename: ./derver-1.0.3-amd64.deb
+Size: 2001062
+MD5sum: c6e48af56d41353d2a5a4bfe0016a4c5
+SHA1: 94963e8811dac1dd885b3b58363386768ed89ff1
+SHA256: 48f48622b4c5103e0e431673106c4bd1687fa1bd95ba5ed9d48cdadb6f326079
+Description: dasddasdsa
+
+Package: dart-sass
+Version: 1.0.3
+Architecture: x32
+Maintainer: Shubhanshu Saxena <shubhanshu.e01@gmail.com>
+Filename: ./derver-1.0.3-x32.deb
+Size: 12214576
+MD5sum: 7abaf7c1f9ee10380e942cb0d0ae5901
+SHA1: cdaafce2b71cd576df75a80f25822c1dbc94e964
+SHA256: 7f57ba027aa4582da2725ea09d636293c61a8e74a4adf7706fed5d7da2a159a5
+Description: dasddasdsa
+
+Package: derver
+Version: 1.0.0
+Architecture: amd64
+Maintainer: Shubhanshu Saxena <shubhanshu.e01@gmail.com>
+Filename: ./derver_1.0.0.deb
+Size: 2504190
+MD5sum: 3790a07418f02cfa5459a89b12c52907
+SHA1: 525d00bb4011bf8e837bdee13df8fd8a7d3e49b8
+SHA256: e8229943ca5c684239dbd11397bf76e2b85d20a68cc0094ea3cd0d5c731cadf7
+Description: derver
+ Derver is a standalone server built in dart.
+Tag: implemented-in::dart, interface::commandline
+

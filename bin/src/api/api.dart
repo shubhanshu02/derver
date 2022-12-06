@@ -21,7 +21,7 @@ class Api {
     // For fetching and displaying random username
     router.get('/random', sampleUsers);
 
-    return router;
+    return router as FutureOr<Response> Function(Request);
   }
 
   Future<Response> sampleUsers(Request request) async {
